@@ -39,10 +39,11 @@ export const getWeatherData = async (req: Request, res: Response) => {
 
     // We will use an if statement to check which city was passed in
     if (city === "london") {
-      console.log(generateLondonWeatherData());
       finalWeatherData = generateLondonWeatherData();
+      console.log(finalWeatherData);
     } else if (city === "dubai") {
       finalWeatherData = generateDubaiWeatherData();
+      console.log(finalWeatherData);
     } else {
       // If the city is not london or dubai, we will throw an error
       res.status(404).send("City not found");
@@ -83,18 +84,23 @@ export const getFlowerData = async (req: Request, res: Response) => {
 switch (flower.toLowerCase()) {
   case "rose":
     finalFlowerData = generateRoseFlowerData();
+    console.log(finalFlowerData);
     break;
   case "lily":
     finalFlowerData = generateLilyFlowerData();
+    console.log(finalFlowerData);
     break;
   case "tulip":
     finalFlowerData = generateTulipFlowerData();
+    console.log(finalFlowerData);
     break;
   case "orchid":
     finalFlowerData = generateOrchidFlowerData();
+    console.log(finalFlowerData);
     break;
   case "hydrangea":
     finalFlowerData = generateHydrangeaFlowerData();
+    console.log(finalFlowerData);
     break;
   default:
     // If the flower is not recognized, we will throw an error

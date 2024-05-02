@@ -6,6 +6,7 @@ interface WeatherData {
   rain: number;
 }
 
+
 interface FlowerData {
   name: string;
   temperature: number;
